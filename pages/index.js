@@ -26,14 +26,6 @@ export default function Home({ posts }) {
       <Hero />
       <SectionContainer>
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
-          <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Latest (poner aquí el componente de presentación)
-            </h1>
-            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              {siteMetadata.description}
-            </p>
-          </div>
           <ul className="divide-y divide-gray-200 dark:divide-gray-700">
             {!posts.length && 'No posts found.'}
             {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {

@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetdata from '@/data/siteMetadata'
+import SectionContainer from '@/components/SectionContainer'
 import { useState } from 'react'
 
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -13,7 +14,7 @@ export default function ListLayout({ posts, title }) {
   })
 
   return (
-    <>
+    <SectionContainer>
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -81,6 +82,6 @@ export default function ListLayout({ posts, title }) {
           })}
         </ul>
       </div>
-    </>
+    </SectionContainer>
   )
 }
